@@ -10,8 +10,9 @@ LiquidCrystal_I2C lcd(0x27, lcdColumns, lcdRows);
 const char* ssid       = "surya";
 const char* password   = "12345678";
 
+//the server in.pool.ntp.org is for indian time zone but i don't find it working for that i have to add something in line 15
 const char* ntpServer = "in.pool.ntp.org";
-const long  gmtOffset_sec = 19800;
+const long  gmtOffset_sec = 19800; // the offset time needs to be increased so that the time shows exactlty according to the IST.
 const int   daylightOffset_sec = 3600;
 
 void printLocalTime()
